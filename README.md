@@ -3,8 +3,8 @@ A program that uses binary trees to find total and individual word counts of a g
 sample input: "this is is sample text"
 
 sample output:
-            this is is sample text 
-            Total word count:4
+            this is is sample text \n
+            Total word count:4 \n
             "is" appears 2 time(s)
             "sample" appears 1 time(s)
             "text" appears 1 time(s)
