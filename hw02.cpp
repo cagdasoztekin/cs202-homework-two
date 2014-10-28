@@ -125,9 +125,8 @@ void WordTree::printWordCounts()
     // prints word counts for each node in pre-order
     WordNode* ptr = root;
     // only root's info is printed here so the output can be as it is on the assignment
-    printf("\n\"%s\" appears %d time(s)\n", ptr->word.c_str(), ptr->count);
-    ptr->leftChild->printCount();
-    ptr->rightChild->printCount();
+    printf("\n");
+    ptr->printCount();
 }
 
 int WordTree::getTotalWordCount()
@@ -168,11 +167,11 @@ void WordNode::countWords(int& count)
 
 void WordNode::printCount()
 {
-    // recursively prints current node's word and word count traversing the tree in pre-order
+    // recursively prints current node's word and word count traversing the tree in in-order
     if(this != NULL)
     {
-        printf("\"%s\" appears %d time(s)\n", this->word.c_str(), this->count);
         this->leftChild->printCount();
+        printf("\"%s\" appears %d time(s)\n", this->word.c_str(), this->count);
         this->rightChild->printCount();
     }
 }
